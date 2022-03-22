@@ -1,8 +1,8 @@
 import { IServerOptions } from "../../../server";
 import { Application } from "express";
 
-const getAllMethods = (obj) => {
-  let props = [];
+const getAllMethods = (obj: any) => {
+  let props: string[] = [];
 
   do {
     const l = Object.getOwnPropertyNames(obj)
@@ -11,6 +11,7 @@ const getAllMethods = (obj) => {
       .filter(
         (p, i, arr) =>
           p != "init" &&
+          p != "basePath" &&
           p != "router" &&
           p != "register" &&
           typeof obj[p] === "function" && //only the methods
@@ -31,7 +32,7 @@ export function registerController(
   app: Application,
   options: IServerOptions,
   name: string,
-  constructor
+  constructor: new () => any
 ) {
   const controller = new constructor();
   for (const funcName of getAllMethods(controller)) {

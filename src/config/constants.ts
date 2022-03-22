@@ -5,4 +5,5 @@ export interface IConstants {
 }
 export abstract class Constants {
   static readonly versions = tuple("v1", "v2");
+  static readonly baseurl = 'http://localhost:3000'
 }

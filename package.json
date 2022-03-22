@@ -9,14 +9,24 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.13",
+    "@types/ioredis": "^4.28.7",
     "@types/node": "^17.0.10",
     "eslint": "^8.7.0"
   },
   "dependencies": {
+    "@mikro-orm/core": "^4.5.10",
+    "@mikro-orm/mongodb": "^4.5.10",
+    "@mikro-orm/reflection": "^4.5.10",
     "@tinyhttp/app": "^2.0.16",
+    "@types/ms": "^0.7.31",
     "dotenv": "^14.2.0",
     "env-var": "^7.1.1",
     "express": "^4.17.2",
-    "kleur": "^4.1.4"
+    "fastest-validator": "^1.12.0",
+    "ioredis": "^4.28.3",
+    "kleur": "^4.1.4",
+    "mongoose": "^6.1.8",
+    "ms": "^2.1.3",
+    "rate-limiter-flexible": "^2.3.6"
   }
 }
